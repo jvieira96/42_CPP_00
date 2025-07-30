@@ -6,13 +6,11 @@
 /*   By: jpedro-f <jpedro-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 11:35:30 by jpedro-f          #+#    #+#             */
-/*   Updated: 2025/07/29 16:33:54 by jpedro-f         ###   ########.fr       */
+/*   Updated: 2025/07/30 15:06:59 by jpedro-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <string>
-#include "contact.hpp"
+#include "include.hpp"
 
 Contact::Contact()
 {

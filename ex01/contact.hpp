@@ -6,15 +6,16 @@
 /*   By: jpedro-f <jpedro-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 11:35:20 by jpedro-f          #+#    #+#             */
-/*   Updated: 2025/07/29 16:33:19 by jpedro-f         ###   ########.fr       */
+/*   Updated: 2025/07/30 15:18:30 by jpedro-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CONTACT_HPP
 # define CONTACT_HPP
 
+#include "include.hpp"
+#include <string.h>
 #include <iostream>
-#include <string>
 
 class Contact
 {
