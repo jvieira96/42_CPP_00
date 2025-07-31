@@ -6,7 +6,7 @@
 /*   By: jpedro-f <jpedro-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/28 15:34:06 by jpedro-f          #+#    #+#             */
-/*   Updated: 2025/07/30 15:31:25 by jpedro-f         ###   ########.fr       */
+/*   Updated: 2025/07/31 14:53:53 by jpedro-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -178,7 +178,7 @@ void PhoneBook::search_contact()
 		choice_nbr =  std::atoi(choice.c_str());
 		if (choice_nbr >= 1 && choice_nbr <= index)
 			break;
-		std::cout << RED << "Error: Numeric from 1 to " << index - 1 << " , try again: " << RESET;
+		std::cout << RED << "Error: invalid, try again: " << RESET;
 	}
 	std::cout << "First Name: " << phonebook[choice_nbr - 1].get_first_name() << std::endl;
 	std::cout << "Last Name: " << phonebook[choice_nbr - 1].get_last_name() << std::endl;
