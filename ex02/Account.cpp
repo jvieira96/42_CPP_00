@@ -6,7 +6,7 @@
 /*   By: jpedro-f <jpedro-f@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 16:24:47 by jpedro-f          #+#    #+#             */
-/*   Updated: 2025/07/30 18:18:41 by jpedro-f         ###   ########.fr       */
+/*   Updated: 2025/07/31 11:53:16 by jpedro-f         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,20 +91,42 @@ void Account::displayStatus(void) const
 
 void Account::makeDeposit(int deposit)
 {
+	int p_amout = _amount;
+	
 	_amount += deposit;
 	_nbDeposits++;
 	_totalNbDeposits++;
 	_totalAmount += deposit;
+	_displayTimestamp();
+	std::cout << " index:" << _accountIndex
+			  << ";p_amount:" << p_amout
+			  << ";deposit:" << deposit
+			  << ";amount:" << _amount
+			  << ";nb_deposits:" << _nbDeposits << std::endl;
 }
 
 bool Account::makeWithdrawal(int withdrawal)
 {
+	int p_amout = _amount;
+
 	if (withdrawal > _amount)
+	{
+		_displayTimestamp();
+		std::cout << " index:" << _accountIndex
+			  	  << ";p_amount:" << p_amout
+				  << ";withdrawal:refused" << std::endl;
 		return false;
+	}
 	 _amount -= withdrawal;
 	 _totalAmount -= withdrawal;
 	 _nbWithdrawals++;
 	 _totalNbWithdrawals++;
+	_displayTimestamp();
+	std::cout << " index:" << _accountIndex
+			  << ";p_amount:" << p_amout
+			  << ";withdrawal:" << withdrawal
+			  << ";amount:" << _amount
+			  << ";nb_withdrawals:" << _nbWithdrawals << std::endl;
 	 return true;
 }
 
